@@ -264,37 +264,160 @@
     .screen-card{width:42vw; max-width:200px;}
   }
 
-  .pricing{background:var(--paper); color:var(--ink);}
-  .pricing .section-head p{color:rgba(27,27,31,0.6);}
-  .price-card{
-    background:var(--ink); color:var(--paper);
-    border-radius:14px; padding:46px 40px;
-    max-width:480px; position:relative; overflow:hidden;
-  }
-  .price-card::after{
-    content:'MOST SHOPS CHOOSE THIS';
-    position:absolute; top:20px; right:-46px; transform:rotate(40deg);
-    background:var(--stamp); color:var(--paper); font-family:'IBM Plex Mono',monospace;
-    font-size:0.62rem; font-weight:600; letter-spacing:0.08em;
-    padding:5px 50px;
-  }
-  .price-card .plan{font-family:'IBM Plex Mono',monospace; color:var(--fade); font-size:0.85rem; letter-spacing:0.08em; text-transform:uppercase;}
-  .price-card .amount{font-size:3rem; font-weight:700; margin:14px 0 4px; letter-spacing:-0.02em;}
-  .price-card .amount span{font-size:1.1rem; color:rgba(253,251,246,0.5); font-weight:500;}
-  .price-card .per{color:rgba(253,251,246,0.5); font-size:0.9rem; margin-bottom:28px;}
-  .price-list{list-style:none; margin-bottom:32px;}
-  .price-list li{
-    display:flex; gap:10px; align-items:flex-start;
-    font-size:0.95rem; color:rgba(253,251,246,0.82); padding:9px 0;
-    border-bottom:1px solid rgba(253,251,246,0.08);
-  }
-  .price-list li:last-child{border-bottom:none;}
-  .price-list li::before{content:'—'; color:var(--stamp); flex-shrink:0;}
-  .price-card .btn-primary{width:100%; justify-content:center;}
-  .price-note{
-    margin-top:18px; font-family:'IBM Plex Mono',monospace; font-size:0.78rem;
-    color:rgba(27,27,31,0.5); text-align:center;
-  }
+ .pricing{
+    background:var(--paper);
+    color:var(--ink);
+}
+
+.pricing-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:32px;
+    align-items:stretch;
+}
+
+.price-card{
+    background:var(--ink);
+    color:white;
+    border-radius:20px;
+    padding:42px;
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    transition:.35s;
+    overflow:hidden;
+}
+
+.price-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 30px 70px rgba(0,0,0,.25);
+}
+
+.price-card.featured{
+    border:2px solid var(--stamp);
+    transform:scale(1.03);
+}
+
+.price-card.featured:hover{
+    transform:scale(1.03) translateY(-8px);
+}
+
+.recommended{
+    position:absolute;
+    top:18px;
+    right:-50px;
+    background:var(--stamp);
+    color:#fff;
+    padding:8px 60px;
+    transform:rotate(40deg);
+    font-size:.7rem;
+    font-weight:700;
+    letter-spacing:.08em;
+}
+
+.plan-badge{
+    display:inline-block;
+    width:fit-content;
+    background:rgba(255,255,255,.08);
+    color:var(--stamp);
+    padding:6px 14px;
+    border-radius:999px;
+    font-size:.8rem;
+    font-weight:600;
+    margin-bottom:18px;
+}
+
+.plan{
+    color:#b9b9b9;
+    text-transform:uppercase;
+    letter-spacing:.12em;
+    font-size:.8rem;
+}
+
+.amount{
+    margin:18px 0 10px;
+    font-size:3rem;
+    font-weight:700;
+}
+
+.amount span{
+    font-size:1rem;
+    color:#bcbcbc;
+}
+
+.per{
+    color:#a9a9a9;
+    margin-bottom:30px;
+}
+
+.price-list{
+    list-style:none;
+    margin-bottom:35px;
+    flex:1;
+}
+
+.price-list li{
+    padding:14px 0;
+    border-bottom:1px solid rgba(255,255,255,.08);
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.price-list li::before{
+    content:"✓";
+    width:22px;
+    height:22px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:rgba(24,82,217,.15);
+    color:var(--stamp);
+    border-radius:50%;
+    font-size:.8rem;
+    font-weight:bold;
+}
+
+.price-card .btn-primary{
+    width:100%;
+    justify-content:center;
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+@media (max-width:900px){
+
+    .pricing-grid{
+        grid-template-columns:1fr;
+    }
+
+    .price-card.featured{
+        transform:none;
+    }
+
+    .price-card.featured:hover{
+        transform:translateY(-8px);
+    }
+
+}
+
+@media (max-width:500px){
+
+    .price-card{
+        padding:28px;
+    }
+
+    .amount{
+        font-size:2.4rem;
+    }
+
+    .recommended{
+        right:-58px;
+        padding:6px 58px;
+        font-size:.6rem;
+    }
+
+}
 
   .install{ }
   .steps{
