@@ -6,11 +6,12 @@
 <title>CoreRetail — Billing &amp; POS for Nigerian Shops</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
-
 </head>
 <body>
+
+<div class="scroll-bar" id="scrollBar"></div>
 
 <nav>
   <div class="brand"><img src="img/logo2.png" alt="CoreRetail logo"></div>
@@ -23,93 +24,126 @@
   <a href="#install" class="nav-cta">Get the app</a>
 </nav>
 
-<header class="hero">
-  <div>
+<header class="hero" id="hero">
+  <div class="hero-copy">
     <div class="eyebrow">Built for the counter, not the boardroom</div>
-    <h1>Every sale,<br>itemized and <em>settled</em><br>before the next customer.</h1>
-    <p class="sub">CoreRetail turns any Android phone into a full billing system — cash, transfer, or card — so your queue never has to wait on you.</p>
+    <h1>Every sale, itemized and <em>settled</em> before the next customer</h1>
+    <p class="sub">CoreRetail turns a phone or a shop PC into a full billing system — cash, transfer, or card — so your queue never has to wait on you.</p>
     <div class="hero-ctas">
-      <a href="https://github.com/colebidex2483/coreretail-app/releases/download/v1.0.0/CoreRetail.apk" class="btn-primary">
-        Download for Android
-      </a>
-      <a href="#pricing" class="btn-secondary">See pricing →</a>
+      <a href="#install" class="btn-primary">Download CoreRetail</a>
+      <a href="#pricing" class="btn-secondary">See pricing</a>
     </div>
     <div class="hero-meta">
-      <span>No Play Store required</span>
+      <span>Android and Windows</span>
       <span>Works offline</span>
+      <span>No Play Store needed</span>
     </div>
   </div>
 
-  <div class="receipt-wrap">
-    <div class="receipt">
-      <div class="r-head">
-        <div class="name">ShopName</div>
-        <div class="addr">Sale receipt · counter 01</div>
+  <div class="hero-visual">
+    <div class="toast sale">
+      <div class="dot">₦</div>
+      <div>
+        <div class="t-label">Sale complete</div>
+        <div class="t-amount">₦3,250.00</div>
       </div>
-      <hr class="r-divider">
-      <div class="r-line" style="animation-delay:.2s"><span><span class="qty">1x</span>Fast checkout</span><span>included</span></div>
-      <div class="r-line" style="animation-delay:.45s"><span><span class="qty">1x</span>Stock tracking</span><span>included</span></div>
-      <div class="r-line" style="animation-delay:.7s"><span><span class="qty">1x</span>Sales history</span><span>included</span></div>
-      <div class="r-line" style="animation-delay:.95s"><span><span class="qty">1x</span>Receipt printing</span><span>included</span></div>
-      <div class="r-line" style="animation-delay:1.2s"><span><span class="qty">1x</span>Works offline</span><span>included</span></div>
-      <hr class="r-divider">
-      <div class="r-total" style="animation-delay:1.45s"><span>TOTAL</span><span>worth it</span></div>
-      <div class="r-stamp" style="animation-delay:1.7s"><span>PAID</span></div>
-      <div class="r-foot">thank you for your patronage </div>
+    </div>
+
+    <div class="laptop-frame">
+      <div class="screen">
+        <div class="screen-inner">
+          <img src="img/Dashboard.png" alt="CoreRetail dashboard on Windows">
+        </div>
+      </div>
+      <div class="base"></div>
+    </div>
+
+    <div class="phone-frame">
+      <div class="frame-inner">
+        <img src="img/POS.jpg" alt="CoreRetail checkout screen">
+      </div>
+    </div>
+
+    <div class="toast stock">
+      <div class="dot">↑</div>
+      <div>
+        <div class="t-label">Stock updated</div>
+        <div class="t-amount">Auto-synced</div>
+      </div>
     </div>
   </div>
 </header>
 
-<section class="ledger" id="features">
-  <div class="section-head">
+<div class="marquee">
+  <div class="marquee-track">
+    <span>Cash</span><span>Transfer</span><span>Card</span><span>Offline mode</span><span>Cloud sync</span><span>Cashier logs</span><span>Bluetooth printing</span><span>Stock alerts</span>
+    <span>Cash</span><span>Transfer</span><span>Card</span><span>Offline mode</span><span>Cloud sync</span><span>Cashier logs</span><span>Bluetooth printing</span><span>Stock alerts</span>
+  </div>
+</div>
+
+<section id="features">
+  <div class="section-head reveal">
     <div class="tag">What's on the receipt</div>
-    <h2>Everything a shop counter needs, nothing it doesn't.</h2>
+    <h2>Everything a shop counter needs, nothing it doesn't</h2>
     <p>No bloated dashboards. Just the tools that move a queue faster and keep your stock honest.</p>
   </div>
 
-  <div class="ledger-rows">
-    <div class="l-row">
-      <div class="l-no">01</div>
-      <div>
+  <div class="feature-layout">
+    <div class="receipt-mockup">
+      <div class="receipt">
+        <div class="r-head">
+          <div class="name">ShopName</div>
+          <div class="addr">Sale receipt · counter 01</div>
+        </div>
+        <hr class="r-divider">
+        <div class="r-line" style="animation-delay:.2s"><span><span class="qty">1x</span>Fast checkout</span><span>included</span></div>
+        <div class="r-line" style="animation-delay:.45s"><span><span class="qty">1x</span>Stock tracking</span><span>included</span></div>
+        <div class="r-line" style="animation-delay:.7s"><span><span class="qty">1x</span>Sales history</span><span>included</span></div>
+        <div class="r-line" style="animation-delay:.95s"><span><span class="qty">1x</span>Receipt printing</span><span>included</span></div>
+        <div class="r-line" style="animation-delay:1.2s"><span><span class="qty">1x</span>Works offline</span><span>included</span></div>
+        <hr class="r-divider">
+        <div class="r-total" style="animation-delay:1.45s"><span>TOTAL</span><span>worth it</span></div>
+        <div class="r-stamp" style="animation-delay:1.7s"><span>PAID</span></div>
+        <div class="r-foot">thank you for your patronage</div>
+      </div>
+    </div>
+
+    <div class="tickets stagger">
+      <div class="ticket">
+        <span class="t-mark">core</span>
         <h3>Tap-to-add checkout</h3>
         <p>Search, scan, or tap through your catalog. Add items to the cart in one motion — built for speed when there's a line forming.</p>
       </div>
-      <div class="l-tag">core · included</div>
-    </div>
-    <div class="l-row">
-      <div class="l-no">02</div>
-      <div>
+      <div class="ticket">
+        <span class="t-mark">stock</span>
         <h3>Live stock tracking</h3>
         <p>Every sale adjusts inventory instantly. Low-stock items are flagged before they run out, not after.</p>
       </div>
-      <div class="l-tag">stock · included</div>
-    </div>
-    <div class="l-row">
-      <div class="l-no">03</div>
-      <div>
+      <div class="ticket">
+        <span class="t-mark">print</span>
         <h3>Receipt printing</h3>
-        <p>Print a branded receipt on a Bluetooth thermal printer for every sale.</p>
+        <p>Print a branded receipt on a Bluetooth thermal printer for every sale, on either platform.</p>
       </div>
-      <div class="l-tag">print · included</div>
-    </div>
-    <div class="l-row">
-      <div class="l-no">04</div>
-      <div>
+      <div class="ticket">
+        <span class="t-mark">reports</span>
         <h3>Sales history &amp; cashier logs</h3>
         <p>Every transaction is logged with who rang it up and when — so closing the till at night takes minutes, not guesswork.</p>
       </div>
-      <div class="l-tag">reports · included</div>
     </div>
   </div>
 </section>
 
 <section id="screens">
-  <div class="section-head">
+  <div class="section-head reveal">
     <div class="tag">A look inside</div>
-    <h2>Designed to be read from across the counter.</h2>
+    <h2>Designed to be read from across the counter</h2>
     <p>Large tap targets, high contrast, and a layout that makes sense to a new cashier on day one.</p>
   </div>
-  <div class="screens-grid">
+  <div class="screens-grid stagger">
+    <!-- <div class="screen-card desktop">
+      <div class="frame"><img src="img/Reports-Desktop.png" alt="Reports screen on Windows"></div>
+      <div class="cap"><b>Reports (Windows) —</b> revenue, profit, and top sellers in one view.</div>
+    </div> -->
     <div class="screen-card">
       <div class="frame"><img src="img/Report.jpg" alt="Report screen"></div>
       <div class="cap"><b>Report —</b> subtotal, VAT, and total at a glance.</div>
@@ -125,104 +159,125 @@
   </div>
 </section>
 
-<section class="pricing" id="pricing">
-  <div class="section-head">
+<section id="pricing">
+  <div class="section-head reveal">
     <div class="tag">Pricing</div>
-    <h2>One plan. Every feature. No surprise charges.</h2>
+    <h2>One plan. Every feature. No surprise charges</h2>
     <p>Simple monthly billing — cancel anytime, no contracts.</p>
   </div>
 
-  <div class="pricing-grid">
-
+  <div class="pricing-grid stagger">
     <div class="price-card starter">
-        <div class="plan-badge">Starter</div>
-
-        <div class="plan">Monthly Plan</div>
-
-        <div class="amount">₦5,000<span>/month</span></div>
-
-        <div class="per">Perfect for a single shop owner</div>
-
-        <ul class="price-list">
-            <li>1 User Account</li>
-            <li>Bluetooth Receipt Printing</li>
-            <li>Sales History</li>
-            <li>Up to 1000 Products</li>
-            <li>Cloud Sync</li>
-        </ul>
-
-        <a href="https://github.com/colebidex2483/coreretail-app/releases/download/v1.0.0/CoreRetail.apk" class="btn-primary">Get Started</a>
+      <div class="plan-badge">Starter</div>
+      <div class="plan">Monthly plan</div>
+      <div class="amount"><span class="count" data-target="5000">₦0</span><span>/month</span></div>
+      <div class="per">Perfect for a single shop owner</div>
+      <ul class="price-list">
+        <li>1 user account</li>
+        <li>Bluetooth receipt printing</li>
+        <li>Sales history</li>
+        <li>Up to 1,000 products</li>
+        <li>Cloud sync</li>
+      </ul>
+      <a href="#install" class="btn-primary">Get started</a>
     </div>
 
     <div class="price-card pro featured">
-
-        <div class="recommended">
-            MOST POPULAR
-        </div>
-
-        <div class="plan-badge">Business</div>
-
-        <div class="plan">Monthly Plan</div>
-
-        <div class="amount">₦10,000<span>/month</span></div>
-
-        <div class="per">For growing shops & supermarkets</div>
-
-        <ul class="price-list">
-            <li>4 User Accounts</li>
-            <li>Unlimited Products</li>
-            <li>Staff Sales Tracking</li>
-            <li>Cashier Logs</li>
-            <li>Cloud Sync</li>
-        </ul>
-
-        <a href="https://github.com/colebidex2483/coreretail-app/releases/download/v1.0.0/CoreRetail.apk" class="btn-primary">Choose Business</a>
-
+      <div class="plan-badge">Business</div>
+      <div class="plan">Monthly plan</div>
+      <div class="amount"><span class="count" data-target="10000">₦0</span><span>/month</span></div>
+      <div class="per">For growing shops &amp; supermarkets</div>
+      <ul class="price-list">
+        <li>4 user accounts</li>
+        <li>Unlimited products</li>
+        <li>Staff sales tracking</li>
+        <li>Cashier logs</li>
+        <li>Cloud sync</li>
+      </ul>
+      <a href="#install" class="btn-primary">Choose Business</a>
     </div>
-
-</div>
+  </div>
 </section>
 
 <section class="install" id="install">
-  <div class="section-head">
-    <div class="tag">Installing without Play Store</div>
-    <h2>Four steps. About two minutes.</h2>
-    <p>CoreRetail installs directly as an APK — no Play Store account needed on your end or ours.</p>
+  <div class="section-head reveal">
+    <div class="tag">Installing CoreRetail</div>
+    <h2>Pick your device. About two minutes either way.</h2>
+    <p>CoreRetail installs directly — no Play Store or Microsoft Store account needed on your end or ours.</p>
   </div>
 
-  <div class="steps">
-    <div class="step">
-      <div class="s-no">STEP 01</div>
-      <h4>Download the file</h4>
-      <p>Tap the download button below on the Android phone you'll use for sales.</p>
+  <div class="os-switch" id="osSwitch">
+    <div class="os-indicator" id="osIndicator"></div>
+    <button class="os-btn active" data-os="android">Android</button>
+    <button class="os-btn" data-os="windows">Windows</button>
+  </div>
+
+  <div class="os-panel active" id="panel-android">
+    <div class="steps stagger">
+      <div class="step">
+        <div class="s-no">01</div>
+        <h4>Download the APK</h4>
+        <p>Tap the download button below on the Android phone you'll use for sales.</p>
+      </div>
+      <div class="step">
+        <div class="s-no">02</div>
+        <h4>Allow the install</h4>
+        <p>Your phone will ask to allow installs from this source — tap <b>Settings</b>, then turn it on.</p>
+      </div>
+      <div class="step">
+        <div class="s-no">03</div>
+        <h4>Open the file</h4>
+        <p>Go back to your downloads, tap the file, then tap <b>Install</b>.</p>
+      </div>
+      <div class="step">
+        <div class="s-no">04</div>
+        <h4>Sign in &amp; sell</h4>
+        <p>Open CoreRetail, sign in, and you're ready to ring up your first sale.</p>
+      </div>
     </div>
-    <div class="step">
-      <div class="s-no">STEP 02</div>
-      <h4>Allow the install</h4>
-      <p>Your phone will ask to allow installs from this source — tap <b>Settings</b>, then turn it on.</p>
-    </div>
-    <div class="step">
-      <div class="s-no">STEP 03</div>
-      <h4>Open the APK</h4>
-      <p>Go back to your downloads, tap the file, then tap <b>Install</b>.</p>
-    </div>
-    <div class="step">
-      <div class="s-no">STEP 04</div>
-      <h4>Sign in &amp; sell</h4>
-      <p>Open CoreRetail, sign in, and you're ready to ring up your first sale.</p>
+    <div class="download-box">
+      <div class="dl-info">
+        <div class="v mono">v1.0.0 · Android 8.0+</div>
+        <h4>CoreRetail.apk</h4>
+      </div>
+      <a href="https://github.com/colebidex2483/coreretail-app/releases/download/v1.0.0/CoreRetail.apk" class="btn-primary">Download APK</a>
     </div>
   </div>
 
-  <div class="download-box">
-    <div class="dl-info">
-      <div class="v mono">v1.0.0 · Android 8.0+</div>
-      <h4>CoreRetail.apk</h4>
+  <div class="os-panel" id="panel-windows">
+    <div class="steps stagger">
+      <div class="step">
+        <div class="s-no">01</div>
+        <h4>Download the installer</h4>
+        <p>Click the download button below on the shop PC you'll use for sales.</p>
+      </div>
+      <div class="step">
+        <div class="s-no">02</div>
+        <h4>Allow the install</h4>
+        <p>Windows may show a SmartScreen warning for a new publisher — click <b>More info</b>, then <b>Run anyway</b>.</p>
+      </div>
+      <div class="step">
+        <div class="s-no">03</div>
+        <h4>Run the setup</h4>
+        <p>Open the downloaded file and follow the setup wizard through to the end.</p>
+      </div>
+      <div class="step">
+        <div class="s-no">04</div>
+        <h4>Sign in &amp; sell</h4>
+        <p>Launch CoreRetail from your desktop, sign in, and you're ready to ring up your first sale.</p>
+      </div>
     </div>
-    <a href="https://github.com/colebidex2483/coreretail-app/releases/download/v1.0.0/CoreRetail.apk" class="btn-primary">Download APK →</a>
+    <div class="download-box">
+      <div class="dl-info">
+        <div class="v mono">v1.0.0 · Windows 10+</div>
+        <h4>CoreRetail-Setup.exe</h4>
+      </div>
+      <a href="https://github.com/colebidex2483/coreretail-app/releases/download/v1.0.0/CoreRetail-Setup.exe" class="btn-primary">Download for Windows</a>
+    </div>
   </div>
 </section>
 
-<hr class="perforated" style="margin:0 6vw;">
+<hr class="perforated">
 
 <footer>
   <div class="f-left">
@@ -235,6 +290,100 @@
     <a href="mailto:colebidesco@gmail.com">Contact</a>
   </div>
 </footer>
+
+<script>
+  // scroll progress bar
+  const scrollBar = document.getElementById('scrollBar');
+  window.addEventListener('scroll', () => {
+    const h = document.documentElement;
+    const pct = (h.scrollTop) / (h.scrollHeight - h.clientHeight) * 100;
+    scrollBar.style.width = pct + '%';
+  });
+
+  // cursor-tracked glow in hero
+  const hero = document.getElementById('hero');
+  hero.addEventListener('mousemove', (e) => {
+    const r = hero.getBoundingClientRect();
+    hero.style.setProperty('--mx', ((e.clientX - r.left) / r.width * 100) + '%');
+    hero.style.setProperty('--my', ((e.clientY - r.top) / r.height * 100) + '%');
+  });
+
+  // OS install tab switcher with sliding indicator
+  const osIndicator = document.getElementById('osIndicator');
+  const osButtons = document.querySelectorAll('.os-btn');
+  const osPanels = document.querySelectorAll('.os-panel');
+
+  function moveIndicator(btn){
+    osIndicator.style.width = btn.offsetWidth + 'px';
+    osIndicator.style.transform = 'translateX(' + (btn.offsetLeft - 5) + 'px)';
+  }
+  moveIndicator(document.querySelector('.os-btn.active'));
+  window.addEventListener('resize', () => moveIndicator(document.querySelector('.os-btn.active')));
+
+  osButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      osButtons.forEach(b => b.classList.remove('active'));
+      osPanels.forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById('panel-' + btn.dataset.os).classList.add('active');
+      moveIndicator(btn);
+    });
+  });
+
+  // stagger: give each child of a .stagger group a rising reveal delay
+  document.querySelectorAll('.stagger').forEach(group => {
+    [...group.children].forEach((child, i) => {
+      child.classList.add('reveal');
+      child.style.transitionDelay = (i * 80) + 'ms';
+    });
+  });
+
+  // reveal-on-scroll
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+  // price count-up, triggered once each card is visible
+  function formatNaira(n){ return '₦' + Math.round(n).toLocaleString('en-NG'); }
+  function countUp(el){
+    const target = parseInt(el.dataset.target, 10);
+    const dur = 900;
+    let start = null;
+    function step(ts){
+      if(!start) start = ts;
+      const p = Math.min((ts - start) / dur, 1);
+      el.textContent = formatNaira(p * target);
+      if(p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  const countObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        countUp(entry.target);
+        countObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.4 });
+  document.querySelectorAll('.amount .count').forEach(el => countObserver.observe(el));
+
+  // magnetic hover on primary buttons
+  document.querySelectorAll('.btn-primary').forEach(btn => {
+    btn.addEventListener('mousemove', (e) => {
+      const r = btn.getBoundingClientRect();
+      const x = (e.clientX - r.left - r.width / 2) * 0.25;
+      const y = (e.clientY - r.top - r.height / 2) * 0.35;
+      btn.style.transform = `translate(${x}px, ${y}px)`;
+    });
+    btn.addEventListener('mouseleave', () => { btn.style.transform = 'translate(0, 0)'; });
+  });
+</script>
 
 </body>
 </html>
